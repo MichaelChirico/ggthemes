@@ -40,6 +40,8 @@ test_that("theme economist with horizontal=FALSE works", {
   expect_equal(thm$panel.grid.major.y, element_blank())
 })
 
+skip_if_not_installed("dplyr")
+
 test_that("theme economist with dark panel works", {
   thm <- theme_economist(dkpanel = TRUE)
   expect_s3_class(thm, "theme")
